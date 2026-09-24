@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "BottomSheetKit",
+  platforms: [.iOS(.v18)],
   products: [
     .library(
       name: "BottomSheetKit",
