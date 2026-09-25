@@ -8,8 +8,8 @@ struct LeaksTests {
 
   @Test
   func memoryLeak() async throws {
-    var bottomSheet: BottomSheetView? = BottomSheetView()
-    weak let weakBottomSheet: BottomSheetView? = bottomSheet
+    var bottomSheet: BottomSheet? = BottomSheet()
+    weak let weakBottomSheet: BottomSheet? = bottomSheet
 
     let view = UIView()
     view.addSubview(bottomSheet!)
@@ -21,5 +21,4 @@ struct LeaksTests {
     #expect(weakBottomSheet == nil)
   }
 }
-
 
